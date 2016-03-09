@@ -1,4 +1,4 @@
-set nu
+" set nu
 set ts=2
 set sw=2
 set expandtab
@@ -44,3 +44,12 @@ nmap k gk
     call cursor(l, c)
   endfunction
 autocmd! BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+
+
+" copy and paste
+vmap <C-c> "+y
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <ESC>"+pa
+
