@@ -33,8 +33,10 @@ bind-key -n M-\ display-panes \; split-window -h -c "#{pane_current_path}"
 bind-key -n M-h display-panes \; split-window -v -c "#{pane_current_path}"
 bind-key -n C-S-n new-session
 bind-key -n S-Left previous-window
-bind-key -n S-Right next-window bind-key -n M-Left previous-window
-bind-key -n M-Right next-window bind-key -n M-Up switch-client -p
+bind-key -n S-Right next-window 
+bind-key -n M-Left previous-window
+bind-key -n M-Right next-window 
+bind-key -n M-Up switch-client -p
 bind-key -n M-Down switch-client -n
 bind-key -n M-j display-panes \; select-pane -t :.-
 bind-key -n M-k display-panes \; select-pane -t :.+
