@@ -28,7 +28,7 @@ source $BYOBU_PREFIX/share/byobu/keybindings/f-keys.tmux.disable
 # Documented in: $BYOBU_PREFIX/share/doc/byobu/help.tmux.txt
 bind-key -n F1 new-window -k -n config byobu-config
 bind-key -n S-F1 new-window -k -n help "sh -c '$BYOBU_PAGER $BYOBU_PREFIX/share/doc/byobu/help.tmux.txt'"
-bind-key -n M-n new-window -c "#{pane_current_path}" \; rename-window "-"
+bind-key -n M-w new-window -c "#{pane_current_path}" \; rename-window "-"
 bind-key -n M-\ display-panes \; split-window -h -c "#{pane_current_path}"
 bind-key -n M-h display-panes \; split-window -v -c "#{pane_current_path}"
 bind-key -n C-S-n new-session
@@ -38,16 +38,16 @@ bind-key -n M-Left previous-window
 bind-key -n M-Right next-window 
 bind-key -n M-Up switch-client -p
 bind-key -n M-Down switch-client -n
-bind-key -n M-j display-panes \; select-pane -t :.-
-bind-key -n M-k display-panes \; select-pane -t :.+
+bind-key -n M-n display-panes \; select-pane -t :.-
+bind-key -n M-p display-panes \; select-pane -t :.+
 bind-key -n S-Up display-panes \; select-pane -U
 bind-key -n S-Down display-panes \; select-pane -D
 bind-key -n S-Left display-panes \; select-pane -L
 bind-key -n S-Right display-panes \; select-pane -R
 bind-key -n C-F3 display-panes \; swap-pane -s :. -t :.- \; select-pane -t :.-
 bind-key -n C-F4 display-panes \; swap-pane -s :. -t :.+ \; select-pane -t :.+
-bind-key -n M-S-j swap-window -t :-1
-bind-key -n M-S-k swap-window -t :+1
+bind-key -n M-S-n swap-window -t :-1
+bind-key -n M-S-p swap-window -t :+1
 bind-key -n M-S-Up resize-pane -U
 bind-key -n M-S-Down resize-pane -D
 bind-key -n M-S-Left resize-pane -L
@@ -81,6 +81,6 @@ bind-key -n M-f resize-pane -Z
 bind-key -n S-F12 source $BYOBU_PREFIX/share/byobu/keybindings/f-keys.tmux.disable \; display-message "Byobu F-keys: DISABLED"
 bind-key -n C-S-F12 new-window $BYOBU_PREFIX/libexec/byobu/include/mondrian
 bind-key -n M-F12 source $BYOBU_PREFIX/share/byobu/keybindings/mouse.tmux.enable
-bind-key -n M-IC paste-buffer
+#bind-key -n M-IC paste-buffer
 
 bind-key -n C-a new-window -n "ctrl-a" "byobu-ctrl-a"
