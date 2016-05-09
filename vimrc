@@ -22,7 +22,7 @@ nmap <leader>ne :NERDTree<cr>
 syntax on
 filetype plugin indent on
 call pathogen#helptags()
-"call pathogen#runtime_append_all_bundles()
+" call pathogen#runtime_append_all_bundles()
 call pathogen#infect()
 
 " Reselect visual block after adjusting indentation

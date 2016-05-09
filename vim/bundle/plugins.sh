@@ -13,8 +13,14 @@ git clone https://github.com/easymotion/vim-easymotion
 git clone https://github.com/tpope/vim-fugitive
 git clone https://github.com/Casecommons/vim-rails
 git clone https://github.com/vim-ruby/vim-ruby
-git clone https://github.com/Valloric/YouCompleteMe
+#git clone https://github.com/Valloric/YouCompleteMe
 git clone https://github.com/vim-scripts/ZoomWin
 git clone https://github.com/scrooloose/nerdtree
 git clone https://github.com/dkprice/vim-easygrep
 git clone https://github.com/mustache/vim-mustache-handlebars
+#git clone https://github.com/shougo/vimshell.vim
+#git clone https://github.com/shougo/vimproc.vim
+#git clone https://github.com/vim-scripts/Conque-Shell
+#git clone https://github.com/rosenfeld/conque-term
+
+
