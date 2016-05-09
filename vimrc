@@ -13,6 +13,7 @@ set ignorecase
 set smarttab
 set hlsearch
 set incsearch
+set paste
 colorscheme pablo
 
 let mapleader = ","
