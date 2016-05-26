@@ -1,4 +1,5 @@
 " set nu
+colorscheme desert
 set ts=2
 set sw=2
 set expandtab
@@ -14,24 +15,23 @@ set smarttab
 set hlsearch
 set incsearch
 set paste
-colorscheme pablo
 
 let mapleader = ","
 nmap <leader>ne :NERDTree<cr>
 
 syntax on
 filetype plugin indent on
-call pathogen#helptags()
 " call pathogen#runtime_append_all_bundles()
 call pathogen#infect()
+call pathogen#helptags()
 
 " Reselect visual block after adjusting indentation
-vnoremap < <gv
-vnoremap > >gv
+" vnoremap < <gv
+" vnoremap > >gv
 
  " Nicer text navigation
-nmap j gj
-nmap k gk
+" nmap j gj
+" nmap k gk
 " Strip trailing whitespace on save
   function! <SID>StripTrailingWhitespaces()
     " Preparation: save last search, and cursor position.
@@ -45,8 +45,6 @@ nmap k gk
     call cursor(l, c)
   endfunction
 autocmd! BufWritePre * :call <SID>StripTrailingWhitespaces()
-
-
 
 " copy and paste
 vmap <C-c> "+y

@@ -192,6 +192,7 @@
         <wrap>no</wrap>
       </action>
     </keybind>
+    <!--
     <keybind key="S-A-Left">
       <action name="SendToDesktopLeft">
         <dialog>no</dialog>
@@ -216,6 +217,7 @@
         <wrap>no</wrap>
       </action>
     </keybind>
+    -->
     <keybind key="W-F1">
       <action name="Desktop">
         <desktop>1</desktop>
@@ -374,17 +376,17 @@
     </keybind>
     <!-- Custom keybindings **************************************
 	 Actions reference: http://openbox.org/wiki/Help:Actions
-	 
+
 	 Super+A : decorate on/off
-	 SUper+(1|2) : Move to monitor 1 or 2
+	 Super+(1|2) : Move to monitor 1 or 2
 	 Super+(Left|Right|Up|Down) : Dock
 	 Super+(Insert,Home,Delete,End) : Quadrant
 	 Super+0 : Center
 	 Super+PageUp : Maximize
 	 Super+PageDown: Minimize
-	 
+
 	 Super+Tab: List windows (as middle-click desktop)
- 
+
  -->
     <!-- Super+A = Toggle decoration -->
     <keybind key="W-a">

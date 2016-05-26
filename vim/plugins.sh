@@ -1,3 +1,5 @@
+mkdir bundle
+cd bundle
 git clone https://github.com/kien/ctrlp.vim
 git clone https://github.com/Raimondi/delimitMate
 git clone https://github.com/roman/golden-ratio
