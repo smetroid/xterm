@@ -1,7 +1,8 @@
+# Create vim and vimrc symbolic links
 ln -s ~/personal/system/vimrc ~/.vimrc
 ln -s ~/personal/system/vim ~/.vim
 
-#Create the lxde-rc.xml symbolic link for windows shortcuts
+# Create the lxde-rc.xml symbolic link for windows shortcuts
 mv ~/.config/openbox/lxde-rc.xml ~/.config/openbox/lxde-rc.xml.original
 ln -s ~/personal/system/X/lxde-rc.xml ~/.config/openbox/lxde-rc.xml
 openbox --reconfigure
@@ -16,3 +17,6 @@ ln -s ~/personal/system/X/parcelliterc ~/.config/parcellite/parcelliterc
 
 # Fix the Conque-Shell vim plugin
 ln -s ~/personal/system/vim/bundle/conque-term/autoload/ ~/personal/system/vim/bundle/Conque-Shell/autoload/
+
+# Add ssh configs
+ln -s ~/personal/system/ssh/config ~/.ssh/config

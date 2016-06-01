@@ -52,3 +52,12 @@ vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 
+" execute "set <M-h>=^[h"
+" execute "set <M-j>=^[j"
+" #execute "set <M-k>=^[k"
+" #execute "set <M-l>=^[l"
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
