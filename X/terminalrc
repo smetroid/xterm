@@ -21,4 +21,4 @@ BackgroundDarkness=0.880000
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
 ScrollingLines=1000000
 ColorForeground=#17f018
-
+ScrollingSingleLine=FALSE
