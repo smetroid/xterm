@@ -20,3 +20,6 @@ ln -s ~/personal/system/vim/bundle/conque-term/autoload/ ~/personal/system/vim/b
 
 # Add ssh configs
 ln -s ~/personal/system/ssh/config ~/.ssh/config
+
+# Add byobu keybindings
+ln -s ~/personal/system/keybindings.tmux ~/.byobu/keybindings.tmux
