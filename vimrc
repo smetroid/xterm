@@ -2,7 +2,7 @@
 colorscheme desert
 set ts=2
 set sw=2
-set expandtab
+set expandtab     " tabs into spaces
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     " set show matching parenthesis
 set ignorecase    ""
@@ -16,7 +16,9 @@ set hlsearch
 set incsearch
 set paste
 
+let python_highlight_all = 1
 let mapleader = ","
+
 nmap <leader>ne :NERDTree<cr>
 
 syntax on
