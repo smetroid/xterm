@@ -24,5 +24,5 @@ git clone https://github.com/mustache/vim-mustache-handlebars
 #git clone https://github.com/shougo/vimproc.vim
 #git clone https://github.com/vim-scripts/Conque-Shell
 #git clone https://github.com/rosenfeld/conque-term
-
+git clone https://github.com/sourcegraph/sourcegraph-vim.git
 
