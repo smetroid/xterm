@@ -1,2 +1,8 @@
 KeepAlive yes
 ServerAliveInterval 60
+
+# defining a specfic key to use to connect to a server if multiple keys exist
+#host stash.localhost.local
+#        Hostname        stash.localhost.local
+#        IdentityFile    ~/.ssh/stash-global-ro
+#        IdentitiesOnly  yes
