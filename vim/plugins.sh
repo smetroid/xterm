@@ -15,7 +15,7 @@ git clone https://github.com/easymotion/vim-easymotion
 git clone https://github.com/tpope/vim-fugitive
 git clone https://github.com/Casecommons/vim-rails
 git clone https://github.com/vim-ruby/vim-ruby
-#git clone https://github.com/Valloric/YouCompleteMe
+git clone https://github.com/Valloric/YouCompleteMe
 git clone https://github.com/vim-scripts/ZoomWin
 git clone https://github.com/scrooloose/nerdtree
 git clone https://github.com/dkprice/vim-easygrep
