@@ -3,7 +3,7 @@ cd bundle
 git clone https://github.com/kien/ctrlp.vim
 git clone https://github.com/Raimondi/delimitMate
 git clone https://github.com/roman/golden-ratio
-git clone https://github.com/zhaocai/GoldenView.Vim
+#git clone https://github.com/zhaocai/GoldenView.Vim
 git clone https://github.com/jistr/vim-nerdtree-tabs
 git clone https://github.com/vim-scripts/SearchComplete
 git clone https://github.com/ervandew/supertab
@@ -25,4 +25,3 @@ git clone https://github.com/mustache/vim-mustache-handlebars
 #git clone https://github.com/vim-scripts/Conque-Shell
 #git clone https://github.com/rosenfeld/conque-term
 git clone https://github.com/sourcegraph/sourcegraph-vim.git
-

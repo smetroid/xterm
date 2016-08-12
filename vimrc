@@ -14,11 +14,11 @@ set ignorecase
 set smarttab
 set hlsearch
 set incsearch
-set paste
+"set paste      " Causes supertab to misbehave
 
 let python_highlight_all = 1
-let mapleader = ","
 
+let mapleader = ","
 nmap <leader>ne :NERDTree<cr>
 
 syntax on
@@ -31,9 +31,10 @@ call pathogen#helptags()
 " vnoremap < <gv
 " vnoremap > >gv
 
- " Nicer text navigation
-" nmap j gj
-" nmap k gk
+" Nicer text navigation
+nmap j gj
+nmap k gk
+
 " Strip trailing whitespace on save
   function! <SID>StripTrailingWhitespaces()
     " Preparation: save last search, and cursor position.
@@ -59,7 +60,16 @@ imap <C-v> <ESC>"+pa
 " #execute "set <M-k>=^[k"
 " #execute "set <M-l>=^[l"
 
-nnoremap <C-h> <C-w>h
+ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+ nnoremap <C-l> <C-w>l
+
+
+
+let g:SuperTabDefaultCompletionTypeDiscovery = [
+\ "&completefunc:<c-x><c-u>",
+\ "&omnifunc:<c-x><c-o>",
+\ ]
+let g:SuperTabLongestHighlight = 1
+
