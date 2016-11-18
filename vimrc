@@ -78,8 +78,8 @@ let g:SuperTabDefaultCompletionTypeDiscovery = [
 let g:SuperTabLongestHighlight = 1
 
 
-" Language specific
-Plugin 'fatih/vim-go'
+" Language specific -- does not appear to work :(
+"Plugin 'fatih/vim-go'
 "Plugin 'klen/python-mode.git'
 
 " vim-go
