@@ -1,5 +1,52 @@
-call pathogen#infect()
-call pathogen#helptags()
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'kien/ctrlp.vim'
+Plugin 'Raimondi/delimitMate'
+"git clone https://github.com/roman/golden-ratio
+"#git clone https://github.com/zhaocai/GoldenView.Vim
+"git clone https://github.com/jistr/vim-nerdtree-tabs
+"git clone https://github.com/vim-scripts/SearchComplete
+Plugin 'ervandew/supertab'
+"git clone https://github.com/majutsushi/tagbar
+"git clone https://github.com/vim-scripts/taglist.vim
+Plugin 'bling/vim-airline'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Casecommons/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+"#git clone https://github.com/Valloric/YouCompleteMe
+Plugin 'regedarek/ZoomWin'
+Plugin 'scrooloose/nerdtree'
+"git clone https://github.com/dkprice/vim-easygrep
+Plugin 'mustache/vim-mustache-handlebars'
+"#git clone https://github.com/shougo/vimshell.vim
+"#git clone https://github.com/shougo/vimproc.vim
+"#git clone https://github.com/vim-scripts/Conque-Shell
+"#git clone https://github.com/rosenfeld/conque-term
+"git clone https://github.com/sourcegraph/sourcegraph-vim.git
+Plugin 'airblade/vim-gitgutter'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'fatih/vim-go'
+Plugin 'klen/python-mode'
+Plugin 'ajh17/VimCompletesMe'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+
 
 " set nu
 set ts=2
@@ -77,12 +124,6 @@ let g:SuperTabDefaultCompletionTypeDiscovery = [
 \ ]
 let g:SuperTabLongestHighlight = 1
 
-
-" Language specific -- does not appear to work :(
-"Plugin 'fatih/vim-go'
-"Plugin 'klen/python-mode.git'
-
-" vim-go
 let g:go_fmt_command = "goimports"
 let g:go_autodetect_gopath = 1
 let g:go_list_type = "quickfix"

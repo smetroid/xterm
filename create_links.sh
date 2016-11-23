@@ -16,7 +16,7 @@ mv ~/.config/parcellite/parcelliterc ~/.config/parcellite/parcelliterc.original
 ln -s ~/personal/system/X/parcelliterc ~/.config/parcellite/parcelliterc
 
 # Fix the Conque-Shell vim plugin
-ln -s ~/personal/system/vim/bundle/conque-term/autoload/ ~/personal/system/vim/bundle/Conque-Shell/autoload/
+#ln -s ~/personal/system/vim/bundle/conque-term/autoload/ ~/personal/system/vim/bundle/Conque-Shell/autoload/
 
 # Add ssh configs
 ln -s ~/personal/system/ssh/config ~/.ssh/config
