@@ -39,6 +39,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdcommenter'
 " Plugin 'ajh17/VimCompletesMe'
 Plugin 'roxma/SimpleAutoComplPop'
+Plugin 'nathanielc/vim-tickscript'
+
 
 " Language specific
 Plugin 'fatih/vim-go'
