@@ -2,6 +2,9 @@
 ln -s ~/personal/system/vimrc ~/.vimrc
 ln -s ~/personal/system/vim ~/.vim
 
+# Create .bashrc link
+ln -s ~/personal/system/bashrc ~/.bashrc
+
 # Create the lxde-rc.xml symbolic link for windows shortcuts
 mv ~/.config/openbox/lxde-rc.xml ~/.config/openbox/lxde-rc.xml.original
 ln -s ~/personal/system/X/lxde-rc.xml ~/.config/openbox/lxde-rc.xml

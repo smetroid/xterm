@@ -16,7 +16,7 @@ Plugin 'Raimondi/delimitMate'
 "#git clone https://github.com/zhaocai/GoldenView.Vim
 "git clone https://github.com/jistr/vim-nerdtree-tabs
 "git clone https://github.com/vim-scripts/SearchComplete
-Plugin 'ervandew/supertab'
+" Plugin 'ervandew/supertab'
 "git clone https://github.com/majutsushi/tagbar
 "git clone https://github.com/vim-scripts/taglist.vim
 Plugin 'bling/vim-airline'
@@ -37,9 +37,13 @@ Plugin 'mustache/vim-mustache-handlebars'
 "git clone https://github.com/sourcegraph/sourcegraph-vim.git
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdcommenter'
+" Plugin 'ajh17/VimCompletesMe'
+Plugin 'roxma/SimpleAutoComplPop'
+
+" Language specific
 Plugin 'fatih/vim-go'
 Plugin 'klen/python-mode'
-Plugin 'ajh17/VimCompletesMe'
+Plugin 'Blackrush/vim-gocode'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -78,8 +82,6 @@ let mapleader = ","
 nmap <leader>ne :NERDTree<cr>
 
 filetype plugin indent on
-" call pathogen#runtime_append_all_bundles()
-
 " Reselect visual block after adjusting indentation
 " vnoremap < <gv
 " vnoremap > >gv

@@ -22,7 +22,7 @@ export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 alias vim='vimx'
 
 #export KERN_DIR=/usr/src/kernels/4.0.4-301.fc22.x86_64
-export GOROOT=/usr/local/go
-export GOPATH=/home/ecarranco/projects/go
-export PATH=$PATH:/usr/local/go/bin:/home/ecarranco/projects/go/bin
+#export GOROOT=/usr/local/go
+export GOPATH=~/projects/go
+export PATH=$PATH:$HOME/projects/go/bin
 
