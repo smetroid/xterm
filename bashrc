@@ -19,7 +19,15 @@ parse_git_branch() {
 }
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
-alias vim='vimx'
+command_exists(){
+  type "$1" &> /dev/null ;
+}
+
+# if vimx available enable it
+if command_exists vimx; then
+  alias vim='vimx'
+fi
+
 
 #export KERN_DIR=/usr/src/kernels/4.0.4-301.fc22.x86_64
 #export GOROOT=/usr/local/go
