@@ -70,6 +70,7 @@ set ignorecase
 set smarttab
 set hlsearch
 set incsearch
+retab
 "set paste      " Causes supertab to misbehave
 
 " Solarized colorscheme things
@@ -139,3 +140,9 @@ let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_generate_tags = 1
+
+" Toggle NERDTree
+nnoremap <F2> :NERDTreeToggle<CR>
+"
+" " Toggle line numbers
+nnoremap <F3> :set invnumber<CR>
