@@ -26,3 +26,6 @@ ln -s ~/personal/system/ssh/config ~/.ssh/config
 
 # Add byobu keybindings
 ln -s ~/personal/system/keybindings.tmux ~/.byobu/keybindings.tmux
+
+# Straight up tmux config
+ln -s ~/personal/system/tmux.conf ~/.tmux.conf
