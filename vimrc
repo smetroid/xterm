@@ -1,6 +1,8 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
-set t_Co=256                  " required in order to get solarized working on a remote server
+"filetype off                  " required
+filetype plugin on
+syntax on
+"set t_Co=256                 " required in order to get solarized working on a remote server
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -41,7 +43,10 @@ Plugin 'scrooloose/nerdcommenter'
 " Plugin 'ajh17/VimCompletesMe'
 Plugin 'roxma/SimpleAutoComplPop'
 Plugin 'nathanielc/vim-tickscript'
-
+Plugin 'posva/vim-vue'
+Plugin 'vimwiki/vimwiki'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
 
 " Language specific
 Plugin 'fatih/vim-go'
@@ -55,7 +60,7 @@ filetype plugin indent on    " required
 "filetype plugin on
 
 
-" set nu
+set nu
 set ts=2
 set sw=2
 set expandtab     " tabs into spaces
@@ -75,14 +80,15 @@ retab
 
 " Solarized colorscheme things
 let g:solarized_termcolors=256
+let g:solarized_termtrans=1
 syntax enable
 colorscheme solarized
 set background=dark
 
-
 let python_highlight_all = 1
 
 let mapleader = ","
+
 nmap <leader>ne :NERDTree<cr>
 
 filetype plugin indent on

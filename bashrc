@@ -17,7 +17,7 @@ LS_COLORS=$LS_COLORS:'di=0;35:' ; export LS_COLORS
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
+export PS1="\u@\h \[\033[31m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 command_exists(){
   type "$1" &> /dev/null ;
@@ -29,8 +29,7 @@ if command_exists vimx; then
 fi
 
 
-#export KERN_DIR=/usr/src/kernels/4.0.4-301.fc22.x86_64
-#export GOROOT=/usr/local/go
+export GOROOT=/usr/local/go
 export GOPATH=~/projects/go
-export PATH=$PATH:$HOME/projects/go/bin
+export PATH=$PATH:$HOME/projects/go/bin:/usr/local/go/bin
 
