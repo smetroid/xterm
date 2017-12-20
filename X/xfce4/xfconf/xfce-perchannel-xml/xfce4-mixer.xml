@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-mixer" version="1.0">
+  <property name="sound-card" type="string" value="HDAIntelPCHAlsamixer"/>
+  <property name="sound-cards" type="empty">
+    <property name="HDAIntelPCHAlsamixer" type="array">
+      <value type="string" value="Master"/>
+      <value type="string" value="Headphone"/>
+      <value type="string" value="PCM"/>
+      <value type="string" value="Front"/>
+      <value type="string" value="Front Mic"/>
+      <value type="string" value="Front Mic Boost"/>
+      <value type="string" value="Line-in"/>
+      <value type="string" value="Line Boost"/>
+      <value type="string" value="IEC958 Default PCM"/>
+      <value type="string" value="Rear Mic"/>
+      <value type="string" value="Rear Mic Boost"/>
+    </property>
+    <property name="HDAATIHDMIAlsamixer" type="array">
+      <value type="string" value="IEC958"/>
+      <value type="string" value="IEC958 1 (1)"/>
+      <value type="string" value="IEC958 2 (2)"/>
+      <value type="string" value="IEC958 3 (3)"/>
+      <value type="string" value="IEC958 4 (4)"/>
+      <value type="string" value="IEC958 5 (5)"/>
+    </property>
+    <property name="PlaybackBuiltinAudioDigitalStereoIEC958PulseAudioMixer" type="array">
+      <value type="string" value="Master"/>
+    </property>
+    <property name="CaptureBuiltinAudioAnalogStereoPulseAudioMixer" type="array">
+      <value type="string" value="Master"/>
+    </property>
+    <property name="CaptureMonitorofBuiltinAudioDigitalStereoIEC958PulseAudioMixer" type="array">
+      <value type="string" value="Master"/>
+    </property>
+  </property>
+  <property name="window-height" type="int" value="545"/>
+  <property name="window-width" type="int" value="982"/>
+</channel>
