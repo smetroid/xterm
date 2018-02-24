@@ -33,7 +33,13 @@
     <property name="CaptureMonitorofBuiltinAudioDigitalStereoIEC958PulseAudioMixer" type="array">
       <value type="string" value="Master"/>
     </property>
+    <property name="PlaybackTahitiHDMIAudioRadeonHD7870XT79507970DigitalStereoHDMI2PulseAudioMixer" type="array">
+      <value type="string" value="Master"/>
+    </property>
+    <property name="CaptureMonitorofTahitiHDMIAudioRadeonHD7870XT79507970DigitalStereoHDMI2PulseAudioMixer" type="array">
+      <value type="string" value="Master"/>
+    </property>
   </property>
   <property name="window-height" type="int" value="545"/>
-  <property name="window-width" type="int" value="982"/>
+  <property name="window-width" type="int" value="1710"/>
 </channel>
