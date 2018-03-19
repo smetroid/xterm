@@ -80,7 +80,7 @@ retab
 
 " Solarized colorscheme things
 let g:solarized_termcolors=256
-let g:solarized_termtrans=1
+"let g:solarized_termtrans=1
 syntax enable
 colorscheme solarized
 set background=dark

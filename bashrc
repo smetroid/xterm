@@ -6,11 +6,26 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
+alias pushdd="pushd \$PWD > /dev/null"
+alias cd='pushdd;cd'
+
+#below to go back to a previous directory (or more)
+alias popdd='popd >/dev/null'
+alias cd.='popdd'
+alias cd..='popdd;popdd'
+alias cd...='popdd;popdd;popdd'
+alias cd....='popdd;popdd;popdd;popdd'
+
+#below to remove directories from the stack only (do not 'cd' anywhere)
+alias .cd='popd -n +0'
+alias ..cd='popd -n +0;popd -n +0;popd -n +0;popd -n +0;popd -n +0;popd -n +0;popd -n +0;popd -n +0;popd -n +0;popd -n +0'
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
-
+#Cygwin specific configuration
+alias ls='ls --color=auto'
 LS_COLORS=$LS_COLORS:'di=0;35:' ; export LS_COLORS
 
 # User specific environment and startup programs
