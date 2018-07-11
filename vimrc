@@ -152,3 +152,7 @@ nnoremap <F2> :NERDTreeToggle<CR>
 "
 " " Toggle line numbers
 nnoremap <F3> :set invnumber<CR>
+
+" Vimwiki settings
+let g:vimwiki_url_maxsave=0 " remove the shortening of the url
+
