@@ -1,6 +1,6 @@
 set nocompatible              " be iMproved, required
 "filetype off                  " required
-filetype plugin on
+"filetype plugin on
 syntax on
 "set t_Co=256                 " required in order to get solarized working on a remote server
 
@@ -16,7 +16,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Raimondi/delimitMate'
 "git clone https://github.com/roman/golden-ratio
-"#git clone https://github.com/zhaocai/GoldenView.Vim
+"git clone https://github.com/zhaocai/GoldenView.Vim
 "git clone https://github.com/jistr/vim-nerdtree-tabs
 "git clone https://github.com/vim-scripts/SearchComplete
 " Plugin 'ervandew/supertab'
@@ -47,6 +47,12 @@ Plugin 'posva/vim-vue'
 Plugin 'vimwiki/vimwiki'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'ervandew/supertab'
+
+" Terraform plugins
+Plugin 'hashivim/vim-terraform'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'juliosueiras/vim-terraform-completion'
 
 " Language specific
 Plugin 'fatih/vim-go'
@@ -55,9 +61,9 @@ Plugin 'Blackrush/vim-gocode'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
+"filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
+filetype plugin on
 
 
 set nu
