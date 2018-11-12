@@ -8,7 +8,7 @@
       <property name="position" type="string" value="p=6;x=840;y=19"/>
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
-      <property name="size" type="uint" value="25"/>
+      <property name="size" type="uint" value="29"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="1"/>
         <value type="int" value="17"/>
@@ -79,8 +79,10 @@
         <value type="string" value="clipit"/>
         <value type="string" value="xfce4-power-manager"/>
         <value type="string" value="networkmanager applet"/>
+        <value type="string" value="autokey-qt"/>
         <value type="string" value="shutter"/>
         <value type="string" value="parcellite"/>
+        <value type="string" value="vlc"/>
       </property>
     </property>
     <property name="plugin-17" type="string" value="places"/>

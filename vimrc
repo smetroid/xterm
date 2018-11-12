@@ -1,6 +1,6 @@
 set nocompatible              " be iMproved, required
 "filetype off                  " required
-filetype plugin on
+"filetype plugin on
 syntax on
 "set t_Co=256                 " required in order to get solarized working on a remote server
 
@@ -16,13 +16,14 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Raimondi/delimitMate'
 "git clone https://github.com/roman/golden-ratio
-"#git clone https://github.com/zhaocai/GoldenView.Vim
+"git clone https://github.com/zhaocai/GoldenView.Vim
 "git clone https://github.com/jistr/vim-nerdtree-tabs
 "git clone https://github.com/vim-scripts/SearchComplete
 " Plugin 'ervandew/supertab'
 "git clone https://github.com/majutsushi/tagbar
 "git clone https://github.com/vim-scripts/taglist.vim
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-fugitive'
@@ -47,6 +48,13 @@ Plugin 'posva/vim-vue'
 Plugin 'vimwiki/vimwiki'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'ervandew/supertab'
+Plugin 'edkolev/tmuxline.vim'
+
+" Terraform plugins
+Plugin 'hashivim/vim-terraform'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'juliosueiras/vim-terraform-completion'
 
 " Language specific
 Plugin 'fatih/vim-go'
@@ -55,9 +63,9 @@ Plugin 'Blackrush/vim-gocode'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
+"filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
+filetype plugin on
 
 
 set nu
@@ -156,3 +164,41 @@ nnoremap <F3> :set invnumber<CR>
 " Vimwiki settings
 let g:vimwiki_url_maxsave=0 " remove the shortening of the url
 
+" vim-airline
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+      let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#show_buffers = 0
+"let g:airline_theme = 'molokai'
+let g:airline#extensions#branch#enabled = 1
+let g:airline_powerline_fonts = 1
+" fuzzy finder
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+
+
+" for tmuxline + vim-airline integration
+let g:tmuxline_preset = {
+      \'a'    : '#S',
+      \'c'    : ['#(whoami)', '#(uptime | cut -d " " -f 1,2,3)'],
+      \'win'  : ['#I', '#W'],
+      \'cwin' : ['#I', '#W', '#F'],
+      \'x'    : '#(date)',
+      \'y'    : ['%R', '%a', '%Y'],
+      \'z'    : '#H'}
+
+
+let g:tmuxline_separators = {
+    \ 'left' : '',
+    \ 'left_alt': '>',
+    \ 'right' : '',
+    \ 'right_alt' : '<',
+    \ 'space' : ' '}
+
+
+let g:airline#extensions#tmuxline#enabled = 1
+
+" start tmuxline even without vim running
+let airline#extensions#tmuxline#snapshot_file = "~/personal/system/tmux_airline"
