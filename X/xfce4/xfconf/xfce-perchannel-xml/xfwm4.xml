@@ -6,7 +6,7 @@
     <property name="borderless_maximize" type="bool" value="true"/>
     <property name="box_move" type="bool" value="false"/>
     <property name="box_resize" type="bool" value="false"/>
-    <property name="button_layout" type="string" value="O|SHMC"/>
+    <property name="button_layout" type="string" value="SOT|HMC"/>
     <property name="button_offset" type="int" value="0"/>
     <property name="button_spacing" type="int" value="0"/>
     <property name="click_to_focus" type="bool" value="true"/>
@@ -54,12 +54,12 @@
     <property name="snap_resist" type="bool" value="false"/>
     <property name="snap_to_border" type="bool" value="true"/>
     <property name="snap_to_windows" type="bool" value="false"/>
-    <property name="snap_width" type="int" value="8"/>
+    <property name="snap_width" type="int" value="7"/>
     <property name="sync_to_vblank" type="bool" value="false"/>
-    <property name="theme" type="string" value="Arc"/>
+    <property name="theme" type="string" value="Arc-Dark"/>
     <property name="tile_on_move" type="bool" value="true"/>
     <property name="title_alignment" type="string" value="center"/>
-    <property name="title_font" type="string" value="Sans Bold 12"/>
+    <property name="title_font" type="string" value="Arial 12"/>
     <property name="title_horizontal_offset" type="int" value="0"/>
     <property name="titleless_maximize" type="bool" value="false"/>
     <property name="title_shadow_active" type="string" value="false"/>
@@ -171,5 +171,6 @@
     <property name="zoom_desktop" type="bool" value="true"/>
     <property name="margin_bottom" type="int" value="0"/>
     <property name="margin_right" type="int" value="0"/>
+    <property name="cycle_raise" type="bool" value="false"/>
   </property>
 </channel>

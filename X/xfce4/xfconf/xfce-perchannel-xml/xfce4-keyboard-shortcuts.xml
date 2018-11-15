@@ -59,8 +59,8 @@
       <property name="XF86Calculator" type="string" value="galculator"/>
       <property name="XF86Calendar" type="string" value="orage"/>
       <property name="override" type="bool" value="true"/>
-      <property name="&lt;Super&gt;2" type="string" value="move-to-next-monitor"/>
       <property name="&lt;Super&gt;l" type="string" value="xflock4"/>
+      <property name="&lt;Super&gt;2" type="string" value="/home/kike/personal/system/bin/move-to-next-monitor"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

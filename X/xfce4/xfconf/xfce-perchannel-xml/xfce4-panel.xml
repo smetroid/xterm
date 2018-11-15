@@ -8,7 +8,7 @@
       <property name="position" type="string" value="p=6;x=840;y=19"/>
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
-      <property name="size" type="uint" value="29"/>
+      <property name="size" type="uint" value="30"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="1"/>
         <value type="int" value="17"/>
@@ -38,7 +38,7 @@
         <value type="uint" value="65535"/>
       </property>
       <property name="disable-struts" type="bool" value="true"/>
-      <property name="output-name" type="string" value="monitor-0"/>
+      <property name="output-name" type="string" value="Primary"/>
     </property>
   </property>
   <property name="plugins" type="empty">
@@ -76,19 +76,34 @@
     </property>
     <property name="plugin-6" type="string" value="systray">
       <property name="names-visible" type="array">
-        <value type="string" value="clipit"/>
-        <value type="string" value="xfce4-power-manager"/>
+        <value type="string" value="thunar"/>
+        <value type="string" value="vlc"/>
         <value type="string" value="networkmanager applet"/>
+        <value type="string" value="clipit"/>
         <value type="string" value="autokey-qt"/>
         <value type="string" value="shutter"/>
+        <value type="string" value="synergy"/>
         <value type="string" value="parcellite"/>
-        <value type="string" value="vlc"/>
+        <value type="string" value="zoom"/>
+        <value type="string" value="xfce4-power-manager"/>
+        <value type="string" value="evolution-alarm-notify"/>
+        <value type="string" value="copyq"/>
+      </property>
+      <property name="names-ordered" type="array">
+        <value type="string" value="shutter"/>
+        <value type="string" value="virt-manager"/>
+        <value type="string" value="synergy"/>
+        <value type="string" value="copyq"/>
+        <value type="string" value="networkmanager applet"/>
+        <value type="string" value="parcellite"/>
+        <value type="string" value="xfce4-power-manager"/>
       </property>
     </property>
     <property name="plugin-17" type="string" value="places"/>
     <property name="plugin-18" type="string" value="showdesktop"/>
     <property name="plugin-7" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+      <property name="mpris-players" type="string" value="vlc"/>
     </property>
   </property>
 </channel>
