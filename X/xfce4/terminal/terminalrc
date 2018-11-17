@@ -41,5 +41,5 @@ MiscShowRelaunchDialog=TRUE
 MiscNewTabAdjacent=FALSE
 ColorBoldUseDefault=FALSE
 BackgroundMode=TERMINAL_BACKGROUND_IMAGE
-FontName=Courier New Bold 12
+FontName=DroidSansMono Nerd Font 12
 

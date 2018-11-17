@@ -61,6 +61,7 @@ Plugin 'fatih/vim-go'
 Plugin 'klen/python-mode'
 Plugin 'Blackrush/vim-gocode'
 
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
@@ -92,8 +93,8 @@ retab
 let g:solarized_termcolors=256
 "let g:solarized_termtrans=1
 syntax enable
-colorscheme solarized
-set background=dark
+"colorscheme solarized
+"set background=dark
 
 let python_highlight_all = 1
 
@@ -163,6 +164,7 @@ nnoremap <F2> :NERDTreeToggle<CR>
 " " Toggle line numbers
 nnoremap <F3> :set invnumber<CR>
 
+
 " Vimwiki settings
 let g:vimwiki_url_maxsave=0 " remove the shortening of the url
 
@@ -204,5 +206,14 @@ let g:airline#extensions#tmuxline#enabled = 1
 
 " start tmuxline even without vim running
 let airline#extensions#tmuxline#snapshot_file = "~/personal/system/tmux_airline"
+
+
+
+" Nerdtree devicons configs
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = ''
+
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['nerdtree'] = ''
 
 set encoding=UTF-8
