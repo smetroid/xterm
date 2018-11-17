@@ -13,7 +13,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'kien/ctrlp.vim'
+"Plugin 'kien/ctrlp.vim'
 Plugin 'Raimondi/delimitMate'
 "git clone https://github.com/roman/golden-ratio
 "git clone https://github.com/zhaocai/GoldenView.Vim
@@ -61,6 +61,10 @@ Plugin 'fatih/vim-go'
 Plugin 'klen/python-mode'
 Plugin 'Blackrush/vim-gocode'
 
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plugin 'ryanoasis/vim-devicons'
+
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 "filetype plugin indent on    " required
@@ -90,8 +94,8 @@ retab
 let g:solarized_termcolors=256
 "let g:solarized_termtrans=1
 syntax enable
-colorscheme solarized
-set background=dark
+"colorscheme solarized
+"set background=dark
 
 let python_highlight_all = 1
 
@@ -202,3 +206,12 @@ let g:airline#extensions#tmuxline#enabled = 1
 
 " start tmuxline even without vim running
 let airline#extensions#tmuxline#snapshot_file = "~/personal/system/tmux_airline"
+
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = ''
+
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['nerdtree'] = ''
+
+
+set encoding=UTF-8
