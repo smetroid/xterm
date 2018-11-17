@@ -48,3 +48,12 @@ export GOROOT=/usr/local/go
 export GOPATH=~/projects/go
 export PATH=$PATH:$HOME/projects/go/bin:/usr/local/go/bin
 
+# BEGIN ANSIBLE MANAGED BLOCK
+function _update_ps1() {
+  PS1=$(powerline-shell $?)
+}
+
+if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+  PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
+# END ANSIBLE MANAGED BLOCK

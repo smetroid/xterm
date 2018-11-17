@@ -13,7 +13,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'kien/ctrlp.vim'
+" Plugin 'kien/ctrlp.vim'
 Plugin 'Raimondi/delimitMate'
 "git clone https://github.com/roman/golden-ratio
 "git clone https://github.com/zhaocai/GoldenView.Vim
@@ -60,6 +60,8 @@ Plugin 'juliosueiras/vim-terraform-completion'
 Plugin 'fatih/vim-go'
 Plugin 'klen/python-mode'
 Plugin 'Blackrush/vim-gocode'
+
+Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -202,3 +204,5 @@ let g:airline#extensions#tmuxline#enabled = 1
 
 " start tmuxline even without vim running
 let airline#extensions#tmuxline#snapshot_file = "~/personal/system/tmux_airline"
+
+set encoding=UTF-8

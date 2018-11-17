@@ -6,8 +6,9 @@
       "ssh",
       "cwd",
       "git",
+      "newline",
+      "root",
       "hg",
-      "jobs",
-      "root"
+      "jobs"
     ]
 }
