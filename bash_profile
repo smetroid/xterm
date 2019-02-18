@@ -125,9 +125,23 @@ if command_exists vimx; then
 fi
 
 
-export GOROOT=/usr/local/go
+#golang_version =
+#sudo ln -s /usr/local/Cellar/go@1.8/1.8.7 /usr/local/go
+# export GOROOT=/usr/local/go
 export GOPATH=~/projects/go
-export PATH=$PATH:$HOME/projects/go/bin:/usr/local/go/bin
+#export PATH=$PATH:$HOME/projects/go/bin:$GOROOT/bin
+export PATH=$PATH:$HOME/projects/go/bin
+# If you need to have go@1.8 first in your PATH run:
+
+# go lang 1.8
+#export GOROOT=/usr/local/opt/go@1.8/bin
+#export PATH=/usr/local/opt/go@1.8/bin:$PATH
+
+
+# If you need to have go@1.10 first in your PATH run:
+#export GOROOT=/usr/local/opt/go@1.10/bin
+# export PATH=/usr/local/opt/go@1.10/bin:$PATH
+
 
 
 # b) function cd_func
@@ -189,3 +203,29 @@ cd_func ()
  }
 
 alias cd=cd_func
+
+
+#aws-iam-authenticator
+#echo 'export PATH=$HOME/bin:$PATH' >> ~/.bash_profile
+
+# Bash completion for kubernetes
+. /usr/local/etc/profile.d/bash_completion.sh
+source <(kubectl completion bash)
+
+#Bash history specific
+export PATH=$HOME/bin:$PATH
+#source <(kubectl completion bash)
+# Maximum number of history lines in memory
+export HISTSIZE=50000
+# Maximum number of history lines on disk
+export HISTFILESIZE=50000
+# Ignore duplicate lines
+export HISTCONTROL=ignoredups:erasedups
+# When the shell exits, append to the history file
+#  instead of overwriting it
+shopt -s histappend
+
+# After each command, append to the history file
+#  and reread it
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+

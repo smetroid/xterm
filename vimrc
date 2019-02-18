@@ -49,7 +49,7 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'ervandew/supertab'
-Plugin 'edkolev/tmuxline.vim'
+"Plugin 'edkolev/tmuxline.vim'
 
 " Terraform plugins
 Plugin 'hashivim/vim-terraform'
@@ -60,6 +60,12 @@ Plugin 'juliosueiras/vim-terraform-completion'
 Plugin 'fatih/vim-go'
 Plugin 'klen/python-mode'
 Plugin 'Blackrush/vim-gocode'
+
+" rainbow color syntax
+Plugin 'luochen1990/rainbow'
+let g:rainbow_active = 1
+
+
 
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'ryanoasis/vim-devicons'
@@ -78,12 +84,11 @@ set sw=2
 set expandtab     " tabs into spaces
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     " set show matching parenthesis
-set ignorecase    ""
 set autoindent
 set copyindent
 set shiftround
 set showmatch
-set ignorecase
+"set ignorecase
 set smarttab
 set hlsearch
 set incsearch
@@ -91,7 +96,7 @@ retab
 "set paste      " Causes supertab to misbehave
 
 " Solarized colorscheme things
-let g:solarized_termcolors=256
+"let g:solarized_termcolors=256
 "let g:solarized_termtrans=1
 syntax enable
 "colorscheme solarized
@@ -168,50 +173,54 @@ nnoremap <F3> :set invnumber<CR>
 " Vimwiki settings
 let g:vimwiki_url_maxsave=0 " remove the shortening of the url
 
+
 " vim-airline
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
       let g:airline_symbols = {}
 endif
+
 let g:airline_symbols.space = "\ua0"
 let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#tabline#show_buffers = 0
 "let g:airline_theme = 'molokai'
-let g:airline#extensions#branch#enabled = 1
-let g:airline_powerline_fonts = 1
+"
 " fuzzy finder
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
 
-" for tmuxline + vim-airline integration
-let g:tmuxline_preset = {
-      \'a'    : '#S',
-      \'c'    : ['#(whoami)', '#(uptime | cut -d " " -f 1,2,3)'],
-      \'win'  : ['#I', '#W'],
-      \'cwin' : ['#I', '#W', '#F'],
-      \'x'    : '#(date)',
-      \'y'    : ['%R', '%a', '%Y'],
-      \'z'    : '#H'}
-
-
-let g:tmuxline_separators = {
-    \ 'left' : '',
-    \ 'left_alt': '>',
-    \ 'right' : '',
-    \ 'right_alt' : '<',
-    \ 'space' : ' '}
-
-
-let g:airline#extensions#tmuxline#enabled = 1
-
-" start tmuxline even without vim running
-let airline#extensions#tmuxline#snapshot_file = "~/personal/system/tmux_airline"
-
+"" for tmuxline + vim-airline integration
+"let g:tmuxline_preset = {
+"      \'a'    : '#S',
+"      \'c'    : ['#(whoami)', '#(uptime | cut -d " " -f 1,2,3)'],
+"      \'win'  : ['#I', '#W'],
+"      \'cwin' : ['#I', '#W', '#F'],
+"      \'x'    : '#(date)',
+"      \'y'    : ['%R', '%a', '%Y'],
+"      \'z'    : '#H'}
+"
+"
+"let g:tmuxline_separators = {
+"    \ 'left' : '',
+"    \ 'left_alt': '>',
+"    \ 'right' : '',
+"    \ 'right_alt' : '<',
+"    \ 'space' : ' '}
+"
+"
+"let g:airline#extensions#tmuxline#enabled = 1
+"
+"" start tmuxline even without vim running
+""let airline#extensions#tmuxline#snapshot_file = "~/personal/system/tmux_airline"
+"
+" Web devicons for vim
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = ''
 
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['nerdtree'] = ''
-
-
 set encoding=UTF-8
+
+if &diff
+  colorscheme solarized
+endif
