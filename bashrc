@@ -48,6 +48,9 @@ export GOROOT=/usr/local/go
 export GOPATH=~/projects/go
 export PATH=$PATH:$HOME/projects/go/bin:/usr/local/go/bin
 
+# adding xbind keys
+xbindkeys -f ~/.xbindkeysrc
+
 # BEGIN ANSIBLE MANAGED BLOCK
 function _update_ps1() {
   PS1=$(powerline-shell $?)

@@ -41,7 +41,7 @@
 ; (gtk_accel_path "<Actions>/terminal-window/preferences" "")
 (gtk_accel_path "<Actions>/terminal-window/goto-tab-6" "<Alt>6")
 ; (gtk_accel_path "<Actions>/terminal-window/contents" "F1")
-; (gtk_accel_path "<Actions>/terminal-window/new-window" "<Primary><Shift>n")
+(gtk_accel_path "<Actions>/terminal-window/new-window" "<Alt>n")
 ; (gtk_accel_path "<Actions>/terminal-window/move-tab-right" "<Primary><Shift>Page_Down")
 ; (gtk_accel_path "<Actions>/terminal-window/zoom-out" "<Primary>minus")
 ; (gtk_accel_path "<Actions>/terminal-window/set-title" "<Primary><Shift>s")
