@@ -51,7 +51,9 @@ export PATH=$PATH:$HOME/projects/go/bin:/usr/local/go/bin
 # adding xbind keys
 xbindkeys -f ~/.xbindkeysrc
 
-# BEGIN ANSIBLE MANAGED BLOCK
+# alias ls -al exa -al
+alias ll='exa -al'
+### powerline-shell ###
 function _update_ps1() {
   PS1=$(powerline-shell $?)
 }
@@ -59,4 +61,4 @@ function _update_ps1() {
 if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
   PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
-# END ANSIBLE MANAGED BLOCK
+### powerline-shell ###

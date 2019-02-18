@@ -49,7 +49,7 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'ervandew/supertab'
-Plugin 'edkolev/tmuxline.vim'
+" Plugin 'edkolev/tmuxline.vim'
 
 " Terraform plugins
 Plugin 'hashivim/vim-terraform'
@@ -93,7 +93,7 @@ retab
 "set paste      " Causes supertab to misbehave
 
 " Solarized colorscheme things
-let g:solarized_termcolors=256
+"let g:solarized_termcolors=256
 "let g:solarized_termtrans=1
 syntax enable
 "colorscheme solarized
@@ -185,31 +185,31 @@ let g:airline_powerline_fonts = 1
 " fuzzy finder
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
-
-" for tmuxline + vim-airline integration
-let g:tmuxline_preset = {
-      \'a'    : '#S',
-      \'c'    : ['#(whoami)', '#(uptime | cut -d " " -f 1,2,3)'],
-      \'win'  : ['#I', '#W'],
-      \'cwin' : ['#I', '#W', '#F'],
-      \'x'    : '#(date)',
-      \'y'    : ['%R', '%a', '%Y'],
-      \'z'    : '#H'}
-
-
-let g:tmuxline_separators = {
-    \ 'left' : '',
-    \ 'left_alt': '>',
-    \ 'right' : '',
-    \ 'right_alt' : '<',
-    \ 'space' : ' '}
-
-
-let g:airline#extensions#tmuxline#enabled = 1
-
-" start tmuxline even without vim running
-let airline#extensions#tmuxline#snapshot_file = "~/personal/system/tmux_airline"
-
+"
+"" for tmuxline + vim-airline integration
+"let g:tmuxline_preset = {
+"      \'a'    : '#S',
+"      \'c'    : ['#(whoami)', '#(uptime | cut -d " " -f 1,2,3)'],
+"      \'win'  : ['#I', '#W'],
+"      \'cwin' : ['#I', '#W', '#F'],
+"      \'x'    : '#(date)',
+"      \'y'    : ['%R', '%a', '%Y'],
+"      \'z'    : '#H'}
+"
+"
+"let g:tmuxline_separators = {
+"    \ 'left' : '',
+"    \ 'left_alt': '>',
+"    \ 'right' : '',
+"    \ 'right_alt' : '<',
+"    \ 'space' : ' '}
+"
+"
+"let g:airline#extensions#tmuxline#enabled = 1
+"
+"" start tmuxline even without vim running
+"let airline#extensions#tmuxline#snapshot_file = "~/personal/system/tmux_airline"
+"
 
 
 " Nerdtree devicons configs
@@ -220,3 +220,7 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['nerdtree'] = ''
 
 set encoding=UTF-8
+
+if &diff
+  colorscheme solarized
+endif
