@@ -249,6 +249,12 @@ bind -x '"\C-x\C-r": pet-select'
 alias v='f -e vim' # quick opening files with vim
 ### v to vim ###
 bindkey '^X^A' fasd-complete
+### exa ###
+alias ll='exa -al'
+### exa ###
+### renaming cat to bat ###
+alias cat='bat'
+### renaming cat to bat ###
 ### fasd_entry ###
 eval "$(fasd --init auto)"
 ### fasd_entry ###
