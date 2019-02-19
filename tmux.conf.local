@@ -312,3 +312,25 @@ bind -n M-a command-prompt -p "Command to all panes/windows/sessions:" \
 bind -n M-e command-prompt -p "Command to current panes:" \
        "run \" tmux list-panes   -F '##{pane_index}' | xargs -I SESS_WIN_PANE \
               tmux send-keys     -t SESS_WIN_PANE '%1' Enter\""
+
+# Change the split window
+bind -n M-i split-window -h
+bind -n M-o split-window -v
+
+# change the zoom key
+bind -n M-f resize-pane -Z
+
+# Use Alt-vim keys without prefix key to switch panes
+bind -n M-h select-pane -L
+bind -n M-j select-pane -D
+bind -n M-k select-pane -U
+bind -n M-l select-pane -R
+
+# change the choose window key
+bind -n M-w choose-window
+
+# create new window
+bind -n M-c new-window
+
+# remap rename window
+bind -n F4 command-prompt 'rename-window %%'

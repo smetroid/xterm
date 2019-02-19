@@ -229,3 +229,26 @@ shopt -s histappend
 #  and reread it
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
+### Pet specific commands ###
+function prev() {
+  PREV=$(echo `history | tail -n2 | head -n1` | sed 's/[0-9]* //')
+  sh -c "pet new `printf %q "$PREV"`"
+}
+
+function pet-select() {
+  BUFFER=$(pet search --query "$READLINE_LINE")
+  READLINE_LINE=$BUFFER
+  READLINE_POINT=${#BUFFER}
+}
+bind -x '"\C-x\C-r": pet-select'
+### Pet Specific commands ###
+
+
+### v to vim ###
+# fasd related
+alias v='f -e vim' # quick opening files with vim
+### v to vim ###
+bindkey '^X^A' fasd-complete
+### fasd_entry ###
+eval "$(fasd --init auto)"
+### fasd_entry ###
