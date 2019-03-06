@@ -1,2 +1,2 @@
 # system
-System settings and hortcuts for various tools I use.
+System settings and shortcuts for various tools I use.
