@@ -1,7 +1,6 @@
 set nocompatible              " be iMproved, required
 "filetype off                  " required
 "filetype plugin on
-syntax on
 "set t_Co=256                 " required in order to get solarized working on a remote server
 
 " set the runtime path to include Vundle and initialize
@@ -27,13 +26,13 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-fugitive'
-Plugin 'Casecommons/vim-rails'
-Plugin 'vim-ruby/vim-ruby'
+"Plugin 'Casecommons/vim-rails'
+"Plugin 'vim-ruby/vim-ruby'
 "#git clone https://github.com/Valloric/YouCompleteMe
 Plugin 'regedarek/ZoomWin'
 Plugin 'scrooloose/nerdtree'
 "git clone https://github.com/dkprice/vim-easygrep
-Plugin 'mustache/vim-mustache-handlebars'
+"Plugin 'mustache/vim-mustache-handlebars'
 "#git clone https://github.com/shougo/vimshell.vim
 "#git clone https://github.com/shougo/vimproc.vim
 "#git clone https://github.com/vim-scripts/Conque-Shell
@@ -44,11 +43,12 @@ Plugin 'scrooloose/nerdcommenter'
 " Plugin 'ajh17/VimCompletesMe'
 Plugin 'roxma/SimpleAutoComplPop'
 Plugin 'nathanielc/vim-tickscript'
-Plugin 'posva/vim-vue'
-Plugin 'vimwiki/vimwiki'
+"Plugin 'posva/vim-vue'
+"Plugin 'vimwiki/vimwiki'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'ervandew/supertab'
+Plugin 'prettier/vim-prettier'
 "Plugin 'edkolev/tmuxline.vim'
 
 " Terraform plugins
@@ -58,14 +58,12 @@ Plugin 'juliosueiras/vim-terraform-completion'
 
 " Language specific
 Plugin 'fatih/vim-go'
-Plugin 'klen/python-mode'
+" Plugin 'klen/python-mode'
 Plugin 'Blackrush/vim-gocode'
 
 " rainbow color syntax
 Plugin 'luochen1990/rainbow'
 let g:rainbow_active = 1
-
-
 
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'ryanoasis/vim-devicons'
@@ -92,6 +90,8 @@ set showmatch
 set smarttab
 set hlsearch
 set incsearch
+set ttimeoutlen=0
+set re=1
 retab
 "set paste      " Causes supertab to misbehave
 
@@ -99,10 +99,11 @@ retab
 "let g:solarized_termcolors=256
 "let g:solarized_termtrans=1
 syntax enable
+syntax on
 "colorscheme solarized
 "set background=dark
 
-let python_highlight_all = 1
+"let python_highlight_all = 1 " causing slowness/lag when saving a python file in vim
 
 let mapleader = ","
 
@@ -221,6 +222,10 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['nerdtree'] = ''
 set encoding=UTF-8
 
+set pastetoggle=<F5>
+
 if &diff
   colorscheme solarized
 endif
+
+

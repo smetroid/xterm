@@ -334,3 +334,8 @@ bind -n M-c new-window
 
 # remap rename window
 bind -n F4 command-prompt 'rename-window %%'
+
+set-option -s escape-time 10
+
+# restore and save tmux sessions
+run-shell ~/projects/tmux-plugins/tmux-resurrect/resurrect.tmux
