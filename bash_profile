@@ -1,74 +1,74 @@
 export PATH="$HOME/Library/Python/2.7/bin:$PATH"
-eval "$(onica-sso shell-init bash)"
-
-
-# Function that adds a ncurses dialog picker for onica-sso
-# with caching. Added to my .bash_profile after installing `dialog`
-
-SSO_CACHE_FILE=/tmp/sso-list-cache.txt
-function sso() {
-  if [ ! $(which dialog) ]
-  then
-    echo "dialog not installed. Try 'brew install dialog' first!"
-    exit
-  fi
-
-  # Remove cache file if it's older than a day
-  find $SSO_CACHE_FILE -mtime +1 -exec rm -v {} \;
-
-  if [ ! -f $SSO_CACHE_FILE ]
-  then
-    onica-sso list > $SSO_CACHE_FILE
-  fi
-
-  # Perhaps the file has no lines?
-  if [ $(cat $SSO_CACHE_FILE | wc -l | tr -d [:space:] ) -lt 1 ]
-  then
-    onica-sso list > $SSO_CACHE_FILE
-  fi
-
-  if [ $# -gt 0 ]
-  then
-    sso_list=$(cat $SSO_CACHE_FILE | grep $1 | awk 'BEGIN{COUNT=1}{printf("%d %s\n", COUNT, $1);COUNT++;}')
-  else
-    sso_list=$(cat $SSO_CACHE_FILE | awk 'BEGIN{COUNT=1}{printf("%d %s\n", COUNT, $1);COUNT++;}')
-  fi
-
-  if [ $(echo $sso_list | wc -c | tr -d [:space:] ) -lt 2 ]
-  then
-    echo "No results for $1"
-    return
-  fi
-
-  exec 3>&1;
-  result=$(dialog --clear --backtitle "Onica SSO List" --title "Account" --menu "Choose one of the following" 25 80 20 \
-  $(echo $sso_list) 2>&1 1>&3);
-  exitcode=$?;
-  exec 3>&-;
-
-  if [ $exitcode -ne 0 ]
-  then
-    echo "Canceled."
-    return
-  fi
-
-  exec 3>&1;
-  MFA=$(dialog --clear --backtitle "Onica SSO List" --title "Token" --form "" 6 22 0 "MFA: " 1 1 "$mfa" 1 10 10 0 2>&1 1>&3)
-  exitcode=$?;
-  exec 3>&-;
-
-  if [ $exitcode -ne 0 ]
-  then
-    echo "Canceled."
-    return
-  fi
-
-  CONNECT_TO=$(echo $sso_list | awk -F "$result " '{printf("%s\n", $2);}'|cut -f 1 -d ' ')
-
-  eval $(onica-sso login $CONNECT_TO $MFA)
-  clear
-  export |grep AWS
-}
+#eval "$(onica-sso shell-init bash)"
+#
+#
+## Function that adds a ncurses dialog picker for onica-sso
+## with caching. Added to my .bash_profile after installing `dialog`
+#
+#SSO_CACHE_FILE=/tmp/sso-list-cache.txt
+#function sso() {
+#  if [ ! $(which dialog) ]
+#  then
+#    echo "dialog not installed. Try 'brew install dialog' first!"
+#    exit
+#  fi
+#
+#  # Remove cache file if it's older than a day
+#  find $SSO_CACHE_FILE -mtime +1 -exec rm -v {} \;
+#
+#  if [ ! -f $SSO_CACHE_FILE ]
+#  then
+#    onica-sso list > $SSO_CACHE_FILE
+#  fi
+#
+#  # Perhaps the file has no lines?
+#  if [ $(cat $SSO_CACHE_FILE | wc -l | tr -d [:space:] ) -lt 1 ]
+#  then
+#    onica-sso list > $SSO_CACHE_FILE
+#  fi
+#
+#  if [ $# -gt 0 ]
+#  then
+#    sso_list=$(cat $SSO_CACHE_FILE | grep $1 | awk 'BEGIN{COUNT=1}{printf("%d %s\n", COUNT, $1);COUNT++;}')
+#  else
+#    sso_list=$(cat $SSO_CACHE_FILE | awk 'BEGIN{COUNT=1}{printf("%d %s\n", COUNT, $1);COUNT++;}')
+#  fi
+#
+#  if [ $(echo $sso_list | wc -c | tr -d [:space:] ) -lt 2 ]
+#  then
+#    echo "No results for $1"
+#    return
+#  fi
+#
+#  exec 3>&1;
+#  result=$(dialog --clear --backtitle "Onica SSO List" --title "Account" --menu "Choose one of the following" 25 80 20 \
+#  $(echo $sso_list) 2>&1 1>&3);
+#  exitcode=$?;
+#  exec 3>&-;
+#
+#  if [ $exitcode -ne 0 ]
+#  then
+#    echo "Canceled."
+#    return
+#  fi
+#
+#  exec 3>&1;
+#  MFA=$(dialog --clear --backtitle "Onica SSO List" --title "Token" --form "" 6 22 0 "MFA: " 1 1 "$mfa" 1 10 10 0 2>&1 1>&3)
+#  exitcode=$?;
+#  exec 3>&-;
+#
+#  if [ $exitcode -ne 0 ]
+#  then
+#    echo "Canceled."
+#    return
+#  fi
+#
+#  CONNECT_TO=$(echo $sso_list | awk -F "$result " '{printf("%s\n", $2);}'|cut -f 1 -d ' ')
+#
+#  eval $(onica-sso login $CONNECT_TO $MFA)
+#  clear
+#  export |grep AWS
+#}
 
 #test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
@@ -248,7 +248,7 @@ bind -x '"\C-x\C-r": pet-select'
 # fasd related
 alias v='f -e vim' # quick opening files with vim
 ### v to vim ###
-bindkey '^X^A' fasd-complete
+#bindkey '^X^A' fasd-complete
 ### exa ###
 alias ll='exa -al'
 ### exa ###
@@ -257,4 +257,10 @@ alias cat='bat'
 ### renaming cat to bat ###
 ### fasd_entry ###
 eval "$(fasd --init auto)"
-### fasd_entry ###
+### history ctrl+r###
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+
+### Git bash completion
+source /usr/local/etc/bash_completion.d/git-completion.bash
+

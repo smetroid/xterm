@@ -1,6 +1,7 @@
 {
     "segments": [
       "~/personal/system/onica_sso.py",
+      "~/personal/system/terraform_workspace.py",
       "virtual_env",
       "username",
       "ssh",
