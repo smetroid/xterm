@@ -1,9 +1,3 @@
-set nocompatible              " be iMproved, required
-"filetype off                  " required
-filetype plugin on
-syntax on
-"set t_Co=256                 " required in order to get solarized working on a remote server
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -47,19 +41,27 @@ Plugin 'posva/vim-vue'
 Plugin 'vimwiki/vimwiki'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'PProvost/vim-ps1.git'
 
 " Language specific
-Plugin 'fatih/vim-go'
-Plugin 'klen/python-mode'
-Plugin 'Blackrush/vim-gocode'
+" Plugin 'fatih/vim-go'
+" Plugin 'klen/python-mode'
+" Plugin 'Blackrush/vim-gocode'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+" filetype plugin on
+" syntax on
+" syntax enabled
+set t_Co=256                 " required in order to get solarized working on a remote server
+
+
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
-
-
 set nu
 set ts=2
 set sw=2
@@ -91,7 +93,7 @@ let mapleader = ","
 
 nmap <leader>ne :NERDTree<cr>
 
-filetype plugin indent on
+" filetype plugin indent on
 " Reselect visual block after adjusting indentation
 " vnoremap < <gv
 " vnoremap > >gv
