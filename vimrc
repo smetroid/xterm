@@ -221,6 +221,13 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['nerdtree'] = ''
 
 set encoding=UTF-8
 
+"Suppress go version on jumpboxes
+let g:go_version_warning = 0
+" set cursorline!
+set lazyredraw
+
 if &diff
   colorscheme solarized
 endif
+
+
