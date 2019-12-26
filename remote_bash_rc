@@ -32,7 +32,7 @@ fi
 
 export GOROOT=/usr/local/go
 export GOPATH=~/projects/go
-export PATH=$PATH:$HOME/projects/go/bin:/usr/local/go/bin
+export PATH=$PATH:$HOME/projects/go/bin:/usr/local/go/bin:~/.local/bin
 
 # adding xbind keys
 #xbindkeys -f ~/.xbindkeysrc
