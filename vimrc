@@ -49,6 +49,7 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'ervandew/supertab'
+Plugin 'francoiscabrol/ranger.vim'
 " Plugin 'edkolev/tmuxline.vim'
 
 " Terraform plugins
