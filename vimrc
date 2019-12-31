@@ -1,7 +1,4 @@
-set nocompatible              " be iMproved, required
-"filetype off                  " required
-"filetype plugin on
-"set t_Co=256                 " required in order to get solarized working on a remote server
+set t_Co=256                 " required in order to get solarized working on a remote server
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -50,6 +47,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'ervandew/supertab'
 Plugin 'prettier/vim-prettier'
 "Plugin 'edkolev/tmuxline.vim'
+Plugin 'PProvost/vim-ps1.git'
 
 " Terraform plugins
 Plugin 'hashivim/vim-terraform'
@@ -71,9 +69,11 @@ Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-"filetype plugin indent on    " required
+set nocompatible              " be iMproved, required
+filetype off                  " required
+filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-filetype plugin on
+"filetype plugin on
 
 
 set nu
@@ -96,12 +96,12 @@ retab
 "set paste      " Causes supertab to misbehave
 
 " Solarized colorscheme things
-"let g:solarized_termcolors=256
-"let g:solarized_termtrans=1
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
 syntax enable
 syntax on
-"colorscheme solarized
-"set background=dark
+colorscheme solarized
+set background=dark
 
 "let python_highlight_all = 1 " causing slowness/lag when saving a python file in vim
 
@@ -109,7 +109,6 @@ let mapleader = ","
 
 nmap <leader>ne :NERDTree<cr>
 
-filetype plugin indent on
 " Reselect visual block after adjusting indentation
 " vnoremap < <gv
 " vnoremap > >gv
@@ -224,8 +223,17 @@ set encoding=UTF-8
 
 set pastetoggle=<F5>
 
+" Trying to fix nerdtree slowwness
+"set cursorline
+set lazyredraw
+
+" Haven't tried the following settings
+" set synmaxcol=128
+"syntax sync minlines=256
+
 if &diff
   colorscheme solarized
+  set background=dark
 endif
 
 
