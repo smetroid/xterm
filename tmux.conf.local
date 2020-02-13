@@ -338,3 +338,6 @@ bind -n F4 command-prompt 'rename-window %%'
 #Fix lag when switching panes
 set-option -s escape-timeout 10
 set-option -g repeat-time 0
+
+# restore and save tmux sessions
+run-shell ~/projects/tmux-plugins/tmux-resurrect/resurrect.tmux
