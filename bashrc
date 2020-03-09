@@ -29,13 +29,17 @@ if command_exists vimx; then
   alias vim='vimx'
 fi
 
-
-export GOROOT=/usr/local/go
-export GOPATH=~/projects/go
-export PATH=$PATH:$HOME/projects/go/bin:/usr/local/go/bin
+# As of go 1.8 no need to set the following
+# export GOROOT=/usr/bin/go
+# export GOPATH=~/projects/go
+# export PATH=$PATH:$HOME/projects/go/bin:$GOROOT/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+alias norg="gron --ungron"
+alias ungron="gron --ungron"
 
 # adding xbind keys
-xbindkeys -f ~/.xbindkeysrc
+# xbindkeys -f ~/.xbindkeysrc
 
 # Bash completion for kubernetes
 #. /usr/local/etc/profile.d/bash_completion.sh
@@ -80,14 +84,14 @@ bind -x '"\C-x\C-r": pet-select'
 # fasd related
 alias v='f -e vim' # quick opening files with vim
 ### v to vim ###
-bindkey '^X^A' fasd-complete
+#bindkey '^X^A' fasd-complete
 
 
 ### exa ###
 alias ll='exa -al'
 ### exa ###
 ### renaming cat to bat ###
-alias cat='bat'
+#alias cat='bat'
 ### renaming cat to bat ###
 ### fasd_entry ###
 eval "$(fasd --init auto)"

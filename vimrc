@@ -69,9 +69,13 @@ Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+set nocompatible
+filetype off
+filetype plugin indent on
 "filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-filetype plugin on
+" filetype plugin on
+
 
 
 set nu
@@ -89,15 +93,18 @@ set ignorecase
 set smarttab
 set hlsearch
 set incsearch
+set ttimeoutlen=0
+set re=1
 retab
 "set paste      " Causes supertab to misbehave
 
 " Solarized colorscheme things
-"let g:solarized_termcolors=256
-"let g:solarized_termtrans=1
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
 syntax enable
-"colorscheme solarized
-"set background=dark
+syntax on
+colorscheme solarized
+set background=dark
 
 let python_highlight_all = 1
 
@@ -220,6 +227,9 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['nerdtree'] = ''
 
 set encoding=UTF-8
+set pastetoggle=<F5>
+
+set lazyredraw
 
 if &diff
   colorscheme solarized
