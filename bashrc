@@ -45,7 +45,7 @@ xbindkeys -f ~/.xbindkeysrc
 ### Bash History ####
 #Bash history specific
 export PATH=$HOME/bin:$PATH
-#source <(kubectl completion bash)
+source <(kubectl completion bash)
 # Maximum number of history lines in memory
 export HISTSIZE=50000
 # Maximum number of history lines on disk
@@ -80,7 +80,7 @@ bind -x '"\C-x\C-r": pet-select'
 # fasd related
 alias v='f -e vim' # quick opening files with vim
 ### v to vim ###
-bindkey '^X^A' fasd-complete
+#bindkey '^X^A' fasd-complete
 
 
 ### exa ###
@@ -100,13 +100,23 @@ function _update_ps1() {
 if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
   PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
-### powerline-shell ###
-# BEGIN ANSIBLE MANAGED BLOCK
-function _update_ps1() {
-  PS1=$(powerline-shell $?)
-}
 
-if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-  PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
-# END ANSIBLE MANAGED BLOCK
+# add this configuration to ~/.bashrc
+#export HH_CONFIG=hicolor         # get more colors
+#shopt -s histappend              # append new history items to .bash_history
+#export HISTCONTROL=ignorespace   # leading space hides commands from history
+#export HISTFILESIZE=10000        # increase history file size (default is 500)
+#export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
+#export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"   # mem/file sync
+# if this is interactive shell, then bind hh to Ctrl-r (for Vi mode check doc)
+#if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hh -- \C-j"'; fi
+
+# fzf specific
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
+
+#export FZF_CTL_T_OPTS="--preview '[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (highlight -O ansi -l {} || coderay {} || rougify {} || cat {}) 2> /dev/null | head -500'"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

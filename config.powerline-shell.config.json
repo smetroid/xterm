@@ -1,0 +1,14 @@
+{
+    "segments": [
+      "~/personal/system/onica_sso.py",
+      "virtual_env",
+      "username",
+      "ssh",
+      "cwd",
+      "git",
+      "newline",
+      "root",
+      "hg",
+      "jobs"
+    ]
+}
