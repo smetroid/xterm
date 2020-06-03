@@ -65,6 +65,9 @@ Plugin 'Blackrush/vim-gocode'
 Plugin 'luochen1990/rainbow'
 let g:rainbow_active = 1
 
+"fzf
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'ryanoasis/vim-devicons'
