@@ -1,9 +1,4 @@
-" needed for vundle
-set nocompatible              " be iMproved, required
-filetype off                  " required
-"filetype plugin on
-"syntax on
-"set t_Co=256                 " required in order to get solarized working on a remote server
+set t_Co=256                 " required in order to get solarized working on a remote server
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -65,7 +60,11 @@ Plugin 'juliosueiras/vim-terraform-completion'
 Plugin 'fatih/vim-go'
 Plugin 'klen/python-mode'
 Plugin 'Blackrush/vim-gocode'
+
+" rainbow color syntax
 Plugin 'luochen1990/rainbow'
+let g:rainbow_active = 1
+
 
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'ryanoasis/vim-devicons'
@@ -78,9 +77,29 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'w0rp/ale'
 
 call vundle#end()            " required
+set nocompatible              " be iMproved, required
+filetype off                  " required
+filetype plugin indent on    " required
 
-"Rainbow settings
-let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+
+" Vim Settings
+set nu
+set ts=2
+set sw=2
+set expandtab     " tabs into spaces
+set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
+set showmatch     " set show matching parenthesis
+set ignorecase    ""
+set autoindent
+set copyindent
+set shiftround
+set showmatch
+set ignorecase
+set smarttab
+set hlsearch
+set incsearch
+retab
+"set paste      " Causes supertab to misbehave
 
 " vim vue settings
 "let g:vue_disable_pre_processors = 1
@@ -108,24 +127,6 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 
-" Vim Settings
-set nu
-set ts=2
-set sw=2
-set expandtab     " tabs into spaces
-set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
-set showmatch     " set show matching parenthesis
-set ignorecase    ""
-set autoindent
-set copyindent
-set shiftround
-set showmatch
-set ignorecase
-set smarttab
-set hlsearch
-set incsearch
-retab
-"set paste      " Causes supertab to misbehave
 
 " Solarized colorscheme things
 let g:solarized_termcolors=256
@@ -188,6 +189,7 @@ let g:SuperTabDefaultCompletionTypeDiscovery = [
 \ "&completefunc:<c-x><c-u>",
 \ "&omnifunc:<c-x><c-o>",
 \ ]
+" Golang specific settings
 let g:SuperTabLongestHighlight = 1
 
 let g:go_fmt_command = "goimports"
@@ -261,7 +263,13 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['nerdtree'] = ''
 
 set encoding=UTF-8
 
-filetype plugin indent on    " required
+set pastetoggle=<F5>
+
+" Trying to fix nerdtree slowwness
+"set cursorline
+set lazyredraw
+
 if &diff
   colorscheme solarized
+  set background=dark
 endif
