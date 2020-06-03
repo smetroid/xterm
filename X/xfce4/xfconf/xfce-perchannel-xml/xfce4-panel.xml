@@ -29,7 +29,7 @@
       <property name="leave-opacity" type="uint" value="100"/>
       <property name="nrows" type="uint" value="1"/>
       <property name="length-adjust" type="bool" value="true"/>
-      <property name="autohide-behavior" type="uint" value="1"/>
+      <property name="autohide-behavior" type="uint" value="0"/>
       <property name="background-image" type="string" value=""/>
       <property name="background-color" type="array">
         <value type="uint" value="56540"/>
@@ -90,6 +90,10 @@
         <value type="string" value="copyq"/>
       </property>
       <property name="names-ordered" type="array">
+        <value type="string" value="dnfdragora-updater"/>
+        <value type="string" value="kupfer.py"/>
+        <value type="string" value="clipit"/>
+        <value type="string" value="autokey-gtk"/>
         <value type="string" value="shutter"/>
         <value type="string" value="virt-manager"/>
         <value type="string" value="synergy"/>

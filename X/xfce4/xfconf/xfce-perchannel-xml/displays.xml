@@ -15,10 +15,10 @@
       </property>
       <property name="EDID" type="string" value="c2b7ca40c666a1fc04a7e0715591b4077fbbf89e"/>
     </property>
-    <property name="DVI-0" type="string" value="3. Lenovo Group Limited 24&quot;">
+    <property name="DVI-0" type="string" value="LG Electronics 23&quot;">
       <property name="Active" type="bool" value="true"/>
-      <property name="Resolution" type="string" value="2560x1440"/>
-      <property name="RefreshRate" type="double" value="59.950550"/>
+      <property name="Resolution" type="string" value="1680x1050"/>
+      <property name="RefreshRate" type="double" value="59.883253"/>
       <property name="Rotation" type="int" value="0"/>
       <property name="Reflection" type="string" value="0"/>
       <property name="Primary" type="bool" value="false"/>
@@ -26,6 +26,7 @@
         <property name="X" type="int" value="0"/>
         <property name="Y" type="int" value="0"/>
       </property>
+      <property name="EDID" type="string" value="fdc7af24cb63facd4c61493763551892d3b910f7"/>
     </property>
     <property name="DisplayPort-0" type="string" value="Lenovo Group Limited 24&quot;">
       <property name="Active" type="bool" value="true"/>
@@ -56,4 +57,5 @@
   </property>
   <property name="Notify" type="bool" value="true"/>
   <property name="IdentityPopups" type="bool" value="false"/>
+  <property name="ActiveProfile" type="string" value="Default"/>
 </channel>
