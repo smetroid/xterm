@@ -1,12 +1,14 @@
+" needed for vundle
 set nocompatible              " be iMproved, required
-"filetype off                  " required
+filetype off                  " required
 "filetype plugin on
-syntax on
+"syntax on
 "set t_Co=256                 " required in order to get solarized working on a remote server
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+" All of your Plugins must be added before the following line
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
@@ -44,8 +46,12 @@ Plugin 'scrooloose/nerdcommenter'
 " Plugin 'ajh17/VimCompletesMe'
 Plugin 'roxma/SimpleAutoComplPop'
 Plugin 'nathanielc/vim-tickscript'
-Plugin 'posva/vim-vue'
-Plugin 'vimwiki/vimwiki'
+
+"" Vue not working
+"Plugin 'posva/vim-vue'
+"Plugin 'leafOfTree/vim-vue-plugin'
+"
+"Plugin 'vimwiki/vimwiki'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'ervandew/supertab'
@@ -53,27 +59,56 @@ Plugin 'ervandew/supertab'
 
 " Terraform plugins
 Plugin 'hashivim/vim-terraform'
-Plugin 'vim-syntastic/syntastic'
 Plugin 'juliosueiras/vim-terraform-completion'
 
 " Language specific
 Plugin 'fatih/vim-go'
 Plugin 'klen/python-mode'
 Plugin 'Blackrush/vim-gocode'
-
 Plugin 'luochen1990/rainbow'
-let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'ryanoasis/vim-devicons'
 
-" All of your Plugins must be added before the following line
+"JavaScript syntax
+Plugin 'sheerun/vim-polyglot'
+
+" ESLint settings
+Plugin 'vim-syntastic/syntastic'
+Plugin 'w0rp/ale'
+
 call vundle#end()            " required
-"filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-filetype plugin on
+
+"Rainbow settings
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+
+" vim vue settings
+"let g:vue_disable_pre_processors = 1
+"autocmd BufNewFile,BufRead *.vue set ft=vue
+"autocmd BufNewFile,BufRead *.vue,*.ts: set filetype=html
 
 
+" Ale Settings
+let g:ale_fixers = {
+ \ 'javascript': ['eslint', 'prettier']
+ \ }
+
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
+"let g:ale_fix_on_save = 1
+
+" ESLint Settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = 'npm run lint --'
+
+" Vim Settings
 set nu
 set ts=2
 set sw=2
@@ -93,26 +128,31 @@ retab
 "set paste      " Causes supertab to misbehave
 
 " Solarized colorscheme things
-"let g:solarized_termcolors=256
-"let g:solarized_termtrans=1
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
 syntax enable
-"colorscheme solarized
-"set background=dark
+syntax on
+colorscheme solarized
+set background=dark
+"
+"Getting vue working
+"let g:vue_disable_pre_processors=1
+"autocmd FileType vue syntax sync fromstart
+"autocmd BufRead,BufNewFile *.vue setlocal
+"filetype=vue.html.javascript.css.less.pug
 
 let python_highlight_all = 1
-
 let mapleader = ","
-
 nmap <leader>ne :NERDTree<cr>
 
-filetype plugin indent on
+" filetype plugin indent on
 " Reselect visual block after adjusting indentation
 " vnoremap < <gv
 " vnoremap > >gv
 
 " Nicer text navigation
-nmap j gj
-nmap k gk
+" nmap j gj
+" nmap k gk
 
 " Strip trailing whitespace on save
   function! <SID>StripTrailingWhitespaces()
@@ -221,6 +261,7 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['nerdtree'] = ''
 
 set encoding=UTF-8
 
+filetype plugin indent on    " required
 if &diff
   colorscheme solarized
 endif
