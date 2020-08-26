@@ -264,3 +264,7 @@ eval "$(fasd --init auto)"
 ### Git bash completion
 source /usr/local/etc/bash_completion.d/git-completion.bash
 
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+export PATH="/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
+
