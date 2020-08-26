@@ -1,0 +1,5 @@
+[user]
+  email =
+  name = Enrique C
+[include]
+  path = ~/projects/system/gitalias.txt
