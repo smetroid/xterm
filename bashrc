@@ -30,7 +30,7 @@ if command_exists vimx; then
 fi
 
 # As of go 1.8 no need to set the following
-# export GOROOT=/usr/bin/go
+#export GOROOT=/usr/lib/go-1.13
 # export GOPATH=~/projects/go
 # export PATH=$PATH:$HOME/projects/go/bin:$GOROOT/bin
 export GOPATH=$HOME/go
@@ -114,3 +114,7 @@ if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
   PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 # END ANSIBLE MANAGED BLOCK
+
+#FZF forgit
+[ -f ~/.forgit/forgit.plugin.zsh ] && source ~/.forgit/forgit.plugin.zsh
+

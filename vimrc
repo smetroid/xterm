@@ -1,7 +1,7 @@
-set nocompatible              " be iMproved, required
+" set nocompatible              " be iMproved, required
 "filetype off                  " required
 "filetype plugin on
-syntax on
+" syntax on
 "set t_Co=256                 " required in order to get solarized working on a remote server
 
 " set the runtime path to include Vundle and initialize
@@ -49,7 +49,18 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'ervandew/supertab'
+
+" PowerShell
+" Plugin 'PProvost/vim-ps1.git'
+Plugin 'zigford/vim-powershell.git'
+
 " Plugin 'edkolev/tmuxline.vim'
+" Ranger
+Plugin 'francoiscabrol/ranger.vim'
+
+"fzf
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 " Terraform plugins
 Plugin 'hashivim/vim-terraform'
@@ -84,7 +95,6 @@ set sw=2
 set expandtab     " tabs into spaces
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     " set show matching parenthesis
-set ignorecase    ""
 set autoindent
 set copyindent
 set shiftround
