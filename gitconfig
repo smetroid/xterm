@@ -1,7 +1,8 @@
 [core]
   autocrlf = false
   whitespace = cr-at-eol
-  excludesfile = /home/ec508u/.gitignore
+  excludesfile = ~/.gitignore
+  editor = vim
 
 [user]
   email =
