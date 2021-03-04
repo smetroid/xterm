@@ -56,7 +56,8 @@ Plugin 'juliosueiras/vim-terraform-completion'
 
 " Language specific
 Plugin 'fatih/vim-go'
-" Plugin 'klen/python-mode'
+Plugin 'python-mode/python-mode'
+let g:pymode_python = 'python3' "[Pymode]: error: Pymode requires vim compiled with +python3 (exclusively). Most of features will be disabled.
 Plugin 'Blackrush/vim-gocode'
 
 " rainbow color syntax

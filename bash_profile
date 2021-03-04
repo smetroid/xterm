@@ -1,4 +1,6 @@
-export PATH="$HOME/Library/Python/2.7/bin:$PATH"
+#export PATH="$HOME/Library/Python/2.7/bin:$PATH"
+#export PATH="$HOME/Library/Python/3.7/bin:$PATH"
+export PATH="/usr/local/bin/:$PATH"
 #eval "$(onica-sso shell-init bash)"
 #
 #
@@ -299,3 +301,9 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 export PATH="/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
 
+### GCP enable shell command completion for gcloud
+. /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
+
+# to add the Google Cloud SDK command line tools to your $PATH
+. /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
