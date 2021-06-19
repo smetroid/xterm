@@ -92,7 +92,6 @@ set sw=2
 set expandtab     " tabs into spaces
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     " set show matching parenthesis
-set ignorecase    ""
 set autoindent
 set copyindent
 set shiftround
@@ -116,8 +115,15 @@ let g:ale_fixers = {
  \ }
 
 let g:ale_sign_error = '❌'
-let g:ale_sign_warning = '⚠️'
+let g:ale_sign_warning = '⚠'
 "let g:ale_fix_on_save = 1
+"Ale and gopls
+let g:ale_linters = {
+ \ 'go': ['gopls'],
+ \}
+
+"highlight clear ALEErrorSign
+"highlight clear ALEWarningSign
 
 " ESLint Settings
 set statusline+=%#warningmsg#
@@ -192,6 +198,7 @@ let g:SuperTabDefaultCompletionTypeDiscovery = [
 \ "&completefunc:<c-x><c-u>",
 \ "&omnifunc:<c-x><c-o>",
 \ ]
+
 " Golang specific settings
 let g:SuperTabLongestHighlight = 1
 
@@ -205,6 +212,8 @@ let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_generate_tags = 1
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
 " Toggle NERDTree
 nnoremap <F2> :NERDTreeToggle<CR>
@@ -265,12 +274,16 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['nerdtree'] = ''
 
 set encoding=UTF-8
-
 set pastetoggle=<F5>
 
 " Trying to fix nerdtree slowwness
 "set cursorline
 set lazyredraw
+
+" Go-code settings
+set nocursorcolumn
+syntax sync minlines=256
+set re=1
 
 if &diff
   colorscheme solarized
