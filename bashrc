@@ -33,6 +33,9 @@ fi
 export GOROOT=/usr/local/go
 export GOPATH=~/projects/go
 export PATH=$PATH:$HOME/projects/go/bin:/usr/local/go/bin
+# export GOROOT=/usr/lib/golang
+#export GOPATH=~/projects/go
+#export PATH=$PATH:$HOME/projects/go/bin:/usr/lib/golang/bin
 
 # adding xbind keys
 xbindkeys -f ~/.xbindkeysrc
@@ -120,3 +123,13 @@ export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# FZF Git
+[ -f ~/.forgit/forgit.plugin.zsh ] && source ~/.forgit/forgit.plugin.zsh
+
+# Gitlab
+if [[ -f $HOME/.gitlab_token ]]
+then
+    export GITLAB_API_PRIVATE_TOKEN=$(cat $HOME/.gitlab_token)
+fi
+export GITLAB_API_ENDPOINT="https://gitlab.com/api/v3"
