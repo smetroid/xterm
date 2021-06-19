@@ -2,3 +2,10 @@
   autocrlf = false
   whitespace = cr-at-eol
   excludesfile = /home/ec508u/.gitignore
+
+[user]
+  email =
+  name = Enrique C
+
+[include]
+  path = ~/personal/system/gitalias.txt
